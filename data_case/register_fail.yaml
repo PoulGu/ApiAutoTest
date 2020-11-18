@@ -1,0 +1,27 @@
+# 手机号为空
+- casedata: {"mobilephone":None,"pwd":123456,"regname":"aaa"}
+  expect: {"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}
+
+# 用户名为空
+- casedata: {"mobilephone":18012345678,"pwd":123665,"regname":None}
+  expect: {"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}
+
+# 密码不能为空
+- casedata: {"mobilephone":18012345678,"pwd":None,"regname":"hello"}
+  expect: {"status":0,"code":"20108","data":None,"msg":"密码长度必须为6~18"}
+
+# 密码长度过长
+- casedata: {"mobilephone":18012345678,"pwd":qwepo2qpwdk2ak123214213,"regname":"hello"}
+  expect: {"status":0,"code":"20108","data":None,"msg":"密码长度必须为6~18"}
+
+# 密码长度过短
+- casedata: {"mobilephone":18012345678,"pwd":12,"regname":"hello"}
+  expect: {"status":0,"code":"20108","data":None,"msg":"密码长度必须为6~18"}
+
+# 手机号码格式不正确
+- casedata: {"mobilephone":180123456782321312312321211321321,"pwd":123655,"regname":"hello"}
+  expect: {"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}
+
+# 手机号码格式不正确
+- casedata: {"mobilephone":180123456782321312312321211321321,"pwd":123655,"regname":"hello"}
+  expect: {"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}

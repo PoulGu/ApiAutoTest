@@ -1,0 +1,7 @@
+
+- casedata: { "mobilephone": 18829246666,"pwd": 123456,"regname": "moco" }
+  expect: { "status": 0,"code": "20110","data": None,"msg": "手机号码已被注册" }
+
+- casedata: { "mobilephone": 18829241234,"pwd": 654321,"regname": "moco" }
+  expect: { "status": 0,"code": "20110","data": None,"msg": "手机号码已被注册" }
+

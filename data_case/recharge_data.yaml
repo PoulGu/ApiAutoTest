@@ -1,0 +1,2 @@
+- casedata: {"mobilephone":"18829299292","amount":30000.03}
+  expect: {"status":"1","code":"10001","msg":"充值成功"}
